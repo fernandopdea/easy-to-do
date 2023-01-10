@@ -1,6 +1,7 @@
 {
   "name": "recipes-app-test",
   "version": "1.0.0",
+  "homepage": "https://fernandopdea.github.io/easy-to-do/",
   "private": true,
   "engines": {
     "node": "16 || 18"
@@ -16,6 +17,8 @@
     "react-scripts": "^5.0.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "cy": "env CY_CLI=true cypress run",
     "cy:open": "cypress open --e2e --browser chrome",
     "start": "env ESLINT_NO_DEV_ERRORS=true react-scripts start",
